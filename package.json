@@ -1,0 +1,22 @@
+{
+  "name": "vn-backend",
+  "version": "1.0.0",
+  "description": "A backend service for volunteer-network",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "start:dev" :"nodemon index"
+  },
+  "author": "Muktadir Hassan",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.2.0",
+    "mongoose": "^5.10.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
