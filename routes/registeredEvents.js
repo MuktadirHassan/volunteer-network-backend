@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const admin = require('firebase-admin');
-const serviceAccount = require('../volunteer-network.json');
 const RegisteredEvents = require('../models/RegisteredVolunteer');
 
 router.get('/', (req, res) => {
@@ -16,7 +15,10 @@ router.get('/', (req, res) => {
     if(admin.apps.length === 0)
     {
         admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount),
+        credential: admin.credential.cert({
+            "private_key": process.env.FIREBASE_PRIVATE_KEY,
+            "client_email": process.env.FIREBASE_CLIENT_EMAIL,
+        }),
         database: process.env.FIRE_DB
     })};
     const authToken = req.header('authToken');
