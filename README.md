@@ -1,5 +1,5 @@
 > Backend code of the fullstack project for Volunteer Network
-# Creative Agency - Backend
+# Volunteer Network - Backend
 Backend server using express.js and mongoose for creating REST API endpoints
 
 ## Features:
